@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_notification"
+            android:icon="@mipmap/ic_notification"
+            android:title="Notification" />
+        <item
+            android:id="@+id/nav_booking"
+            android:icon="@mipmap/ic_booking"
+            android:title="My booking" />
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@mipmap/ic_setting"
+            android:title="Setting" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Log Out" />
+    </group>
+
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/nav_term"
+                android:title="Term &amp; Condition" />
+            <item
+                android:id="@+id/nav_rate"
+                android:title="Rate This App" />
+
+            <item
+                android:id="@+id/nav_about"
+                android:title="About" />
+        </menu>
+    </item>
+
+</menu>
