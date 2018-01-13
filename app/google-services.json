@@ -1,0 +1,101 @@
+{
+  "project_info": {
+    "project_number": "913091240863",
+    "firebase_url": "https://sa-11-ce9b8.firebaseio.com",
+    "project_id": "sa-11-ce9b8",
+    "storage_bucket": "sa-11-ce9b8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913091240863:android:79d0824443fd5e58",
+        "android_client_info": {
+          "package_name": "com.ingeniumbd.sellerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913091240863-oai3uiqcnbseqm0sr7fvsuoo7kq4kl1o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ingeniumbd.sellerapp",
+            "certificate_hash": "09d1b994481720fa86b64f5c69f6a0b7cb485801"
+          }
+        },
+        {
+          "client_id": "913091240863-5tq43sf44391ji3tqonn4k2g6l24f6b7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ingeniumbd.sellerapp",
+            "certificate_hash": "528c85f4283b699f1f736f2a6e47d529bceba4d9"
+          }
+        },
+        {
+          "client_id": "913091240863-tieloc85mrjud7mb45fhnn084nggskpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOM7wLy0B3PxZHQk57Uw8gd8062HUoKcc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913091240863-n52m1vvp3nhuvi9s8hl1m0lf0vt4qec6.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.faizulkarim.Seller"
+              }
+            },
+            {
+              "client_id": "913091240863-tieloc85mrjud7mb45fhnn084nggskpq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:913091240863:android:c84afad30f190963",
+        "android_client_info": {
+          "package_name": "com.ingeniumbd.buyerapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "913091240863-tieloc85mrjud7mb45fhnn084nggskpq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOM7wLy0B3PxZHQk57Uw8gd8062HUoKcc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
