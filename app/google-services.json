@@ -48,10 +48,10 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "913091240863-n52m1vvp3nhuvi9s8hl1m0lf0vt4qec6.apps.googleusercontent.com",
+              "client_id": "913091240863-vlf0u3pak7bsfn6onv5dlj8of7a9hvqi.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.faizulkarim.Seller"
+                "bundle_id": "biswajitbanik.Buyer"
               }
             },
             {
@@ -74,6 +74,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "913091240863-m0mvesldrjsf5autnfrsbe0nk0ffndtv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ingeniumbd.buyerapp",
+            "certificate_hash": "528c85f4283b699f1f736f2a6e47d529bceba4d9"
+          }
+        },
+        {
           "client_id": "913091240863-tieloc85mrjud7mb45fhnn084nggskpq.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -88,8 +96,20 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "913091240863-vlf0u3pak7bsfn6onv5dlj8of7a9hvqi.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "biswajitbanik.Buyer"
+              }
+            },
+            {
+              "client_id": "913091240863-tieloc85mrjud7mb45fhnn084nggskpq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

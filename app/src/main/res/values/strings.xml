@@ -17,6 +17,28 @@
     <string name="country">Country</string>
     <string name="city">City</string>
     <string name="your_email">Your email</string>
+    <string name="title_activity_maps">Map</string>
 
+    <string-array name="day_array">
+        <item>Day</item>
+        <item>Sat</item>
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+    </string-array>
+
+    <string-array name="time_array">
+        <item>Time</item>
+        <item>Sat</item>
+        <item>Sun</item>
+        <item>Mon</item>
+        <item>Tue</item>
+        <item>Wed</item>
+        <item>Thu</item>
+        <item>Fri</item>
+    </string-array>
 
 </resources>
