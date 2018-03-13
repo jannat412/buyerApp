@@ -19,7 +19,14 @@ public class SellerProfile {
     public String storeName;
     @JsonProperty("category")
     public String category;
-
+    @JsonProperty("country")
+    public String country;
+    @JsonProperty("phone")
+    public String phone;
+    @JsonProperty("cover_photo")
+    public String cover_photo;
+    @JsonProperty("profile_picture")
+    public String profile_picture;
     public SellerProfile() {
 
     }
@@ -61,5 +68,45 @@ public class SellerProfile {
 
     public String getStoreName() {
         return storeName;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCover_photo() {
+        return cover_photo;
+    }
+
+    public void setCover_photo(String cover_photo) {
+        this.cover_photo = cover_photo;
+    }
+
+    public String getProfile_picture() {
+        return profile_picture;
+    }
+
+    public void setProfile_picture(String profile_picture) {
+        this.profile_picture = profile_picture;
     }
 }

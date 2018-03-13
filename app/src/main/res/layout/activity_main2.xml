@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context="com.ingeniumbd.buyerapp.activities.SearchActivity">
+    tools:context="com.ingeniumbd.buyerapp.activities.Main2Activity">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -284,6 +284,7 @@
                                         android:orientation="horizontal">
 
                                         <TextView
+                                            android:id="@+id/location"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:paddingTop="4dp"
@@ -293,11 +294,11 @@
                                             android:textSize="11sp" />
 
                                         <ImageView
+                                            android:id="@+id/placeTakerImg"
                                             android:layout_width="wrap_content"
                                             android:layout_height="wrap_content"
                                             android:layout_gravity="center"
                                             android:paddingBottom="4dp"
-
                                             android:paddingTop="4dp"
                                             android:src="@drawable/location" />
                                     </LinearLayout>

@@ -2,6 +2,8 @@ package com.ingeniumbd.buyerapp.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -33,6 +35,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener authStateListener;
     private ProgressDialog progressDialog;
+    String preferencesValue ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,6 +89,12 @@ public class LoginActivity extends AppCompatActivity {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()){
+                                FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
+                                preferencesValue = firebaseUser.getUid();
+                                SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(LoginActivity.this);
+                                SharedPreferences.Editor editor = preferences.edit();
+                                editor.putString("Key",preferencesValue);
+                                editor.apply();
                                 startActivity(new Intent(LoginActivity.this,MainActivity.class));
                                 finish();
                             }
