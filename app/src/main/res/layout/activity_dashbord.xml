@@ -9,7 +9,7 @@
     tools:openDrawer="start">
 
     <include
-        layout="@layout/app_bar_das"
+        layout="@layout/app_bar_dashboard"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -20,14 +20,15 @@
         android:layout_gravity="start"
         android:background="@drawable/gradienttwo"
         android:fitsSystemWindows="true"
-        app:headerLayout="@layout/nav_header_home_page">
+        app:headerLayout="@layout/nav_header_home_main"
+        app:menu="@menu/activity_main_drawer"
+        app:itemTextColor="@color/white">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <include layout="@layout/nav_header_home_page" />
+            <include layout="@layout/nav_header_home_main" />
         </LinearLayout>
     </android.support.design.widget.NavigationView>
 

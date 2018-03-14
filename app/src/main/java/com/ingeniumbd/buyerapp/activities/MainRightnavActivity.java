@@ -1,8 +1,6 @@
 package com.ingeniumbd.buyerapp.activities;
 
-import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
-import android.content.Intent;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
@@ -17,7 +15,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
@@ -31,13 +28,12 @@ import com.firebase.client.Firebase;
 import com.firebase.client.FirebaseError;
 import com.firebase.client.ValueEventListener;
 import com.ingeniumbd.buyerapp.R;
-import com.ingeniumbd.buyerapp.model.Products;
 import com.ingeniumbd.buyerapp.model.SellerProfile;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class Main2Activity extends AppCompatActivity implements AdapterView.OnItemSelectedListener,
+public class MainRightnavActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener,
         NavigationView.OnNavigationItemSelectedListener,
         TimePickerDialog.OnTimeSetListener {
 
@@ -57,7 +53,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_main_rightnav);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -100,7 +96,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
         location = (TextView) findViewById(R.id.location);
 
         listView = (ListView) findViewById(R.id.serviceTypeLV);
-        ArrayAdapter myAdapter = new ArrayAdapter(Main2Activity.this, android.R.layout.simple_list_item_1, service_type);
+        ArrayAdapter myAdapter = new ArrayAdapter(MainRightnavActivity.this, android.R.layout.simple_list_item_1, service_type);
         listView.setAdapter(myAdapter);
 
         serviceType.setOnClickListener(new View.OnClickListener() {
@@ -113,7 +109,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
                 } else {
                     rl.setVisibility(View.GONE);
                 }
-                Toast.makeText(Main2Activity.this, "Cliecked", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainRightnavActivity.this, "Cliecked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -123,7 +119,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
             public void onClick(View view) {
                 Calendar now = Calendar.getInstance();
                 new android.app.DatePickerDialog(
-                        Main2Activity.this,
+                        MainRightnavActivity.this,
                         new android.app.DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -154,7 +150,7 @@ public class Main2Activity extends AppCompatActivity implements AdapterView.OnIt
 
                 Calendar now = Calendar.getInstance();
                 new android.app.TimePickerDialog(
-                        Main2Activity.this,
+                        MainRightnavActivity.this,
                         new android.app.TimePickerDialog.OnTimeSetListener() {
                             @Override
                             public void onTimeSet(TimePicker var1, int hourOfDay, int var3) {

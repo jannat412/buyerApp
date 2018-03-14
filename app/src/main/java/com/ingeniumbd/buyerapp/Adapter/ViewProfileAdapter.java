@@ -1,7 +1,6 @@
 package com.ingeniumbd.buyerapp.Adapter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ingeniumbd.buyerapp.R;
-import com.ingeniumbd.buyerapp.activities.MainActivity;
 
 import java.util.ArrayList;
 

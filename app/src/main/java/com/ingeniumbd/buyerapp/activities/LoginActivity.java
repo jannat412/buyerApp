@@ -18,7 +18,6 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.ingeniumbd.buyerapp.Manifest;
 import com.ingeniumbd.buyerapp.R;
 
 public class LoginActivity extends AppCompatActivity {
@@ -49,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
                 if (firebaseUser != null){
-                    startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    startActivity(new Intent(LoginActivity.this, HomeMainActivity.class));
                     finish();
                 }
             }
@@ -95,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                                 SharedPreferences.Editor editor = preferences.edit();
                                 editor.putString("Key",preferencesValue);
                                 editor.apply();
-                                startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                startActivity(new Intent(LoginActivity.this,HomeMainActivity.class));
                                 finish();
                             }
                         }

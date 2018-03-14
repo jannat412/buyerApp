@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.ingeniumbd.buyerapp.activities.MainActivity">
+    tools:context="com.ingeniumbd.buyerapp.activities.HomeMainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -46,7 +46,7 @@
 
         <include
             app:layout_behavior="@string/appbar_scrolling_view_behavior"
-            layout="@layout/content_main"/>
+            layout="@layout/content_home_main"/>
     </RelativeLayout>
 
 

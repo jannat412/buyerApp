@@ -55,6 +55,6 @@
         </android.support.v7.widget.Toolbar>
     </android.support.design.widget.AppBarLayout>
 
-    <include layout="@layout/content_das" />
+    <include layout="@layout/content_dashboard" />
 
 </android.support.design.widget.CoordinatorLayout>

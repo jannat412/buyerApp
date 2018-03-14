@@ -5,8 +5,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -16,7 +14,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
@@ -29,7 +26,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
@@ -43,39 +39,30 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
-import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptor;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
-import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.ingeniumbd.buyerapp.R;
-import com.ingeniumbd.buyerapp.infrastructure.Constant;
 import com.ingeniumbd.buyerapp.model.BuyerProfile;
 import com.ingeniumbd.buyerapp.model.Products;
-import com.ingeniumbd.buyerapp.model.ProductsFirestore;
 import com.ingeniumbd.buyerapp.model.SellerProfile;
-import com.theartofdev.edmodo.cropper.CropImage;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
-public class MainActivity extends AppCompatActivity implements
+public class HomeMainActivity extends AppCompatActivity implements
         NavigationView.OnNavigationItemSelectedListener,
         OnMapReadyCallback,
         MyDialogFragment.OnCitySelectedListener {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = HomeMainActivity.class.getSimpleName();
     private GoogleMap mGoogleMap;
     private Double geolat, geolong;
     Button button;
@@ -108,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home_main);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -198,8 +185,8 @@ public class MainActivity extends AppCompatActivity implements
                                     }
                                     if (seller_id_array.size() > 0) {
 
-                                        Toast.makeText(MainActivity.this, "id " + seller_id, Toast.LENGTH_LONG).show();
-                                        Intent intent = new Intent(MainActivity.this, Dashboard.class);
+                                        Toast.makeText(HomeMainActivity.this, "id " + seller_id, Toast.LENGTH_LONG).show();
+                                        Intent intent = new Intent(HomeMainActivity.this, Dashboard.class);
                                         intent.putExtra("sellerIdList", seller_id_array);
                                         startActivity(intent);
                                     }
@@ -215,7 +202,7 @@ public class MainActivity extends AppCompatActivity implements
 
 
         //Buyer Profile nav header:
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(HomeMainActivity.this);
         uKey = preferences.getString("Key", "");
         Log.e("userKey", uKey);
 
@@ -233,7 +220,7 @@ public class MainActivity extends AppCompatActivity implements
                         nav_buyerAddress.setText(city + "," + address);
                         url = buyerProfile.getProfilepic();
                         if (!url.equals(" ")) {
-                            Glide.with(MainActivity.this)
+                            Glide.with(HomeMainActivity.this)
                                     .load(url)
                                     .into(nav_buyerProfileImage);
 
@@ -254,7 +241,7 @@ public class MainActivity extends AppCompatActivity implements
         buttonEditProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, EditProfile.class));
+                startActivity(new Intent(HomeMainActivity.this, EditProfile.class));
             }
         });
 
@@ -299,13 +286,13 @@ public class MainActivity extends AppCompatActivity implements
         });
 
         listView = (ListView) findViewById(R.id.serviceTypeLV);
-        ArrayAdapter myAdapter = new ArrayAdapter(MainActivity.this, android.R.layout.simple_list_item_1, service_type);
+        ArrayAdapter myAdapter = new ArrayAdapter(HomeMainActivity.this, android.R.layout.simple_list_item_1, service_type);
         listView.setAdapter(myAdapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 // String item = service_type.get(i);
-                //  Toast.makeText(MainActivity.this, "Item: " + item, Toast.LENGTH_LONG).show();
+                //  Toast.makeText(HomeMainActivity.this, "Item: " + item, Toast.LENGTH_LONG).show();
                 serviceTypeItem = service_type.get(i);
             }
         });
@@ -338,7 +325,7 @@ public class MainActivity extends AppCompatActivity implements
                 } else {
                     rl.setVisibility(View.GONE);
                 }
-                //Toast.makeText(MainActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(HomeMainActivity.this, "Clicked", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -348,7 +335,7 @@ public class MainActivity extends AppCompatActivity implements
             public void onClick(View view) {
                 Calendar now = Calendar.getInstance();
                 new android.app.DatePickerDialog(
-                        MainActivity.this,
+                        HomeMainActivity.this,
                         new android.app.DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
@@ -379,7 +366,7 @@ public class MainActivity extends AppCompatActivity implements
 
                 Calendar now = Calendar.getInstance();
                 new android.app.TimePickerDialog(
-                        MainActivity.this,
+                        HomeMainActivity.this,
                         new android.app.TimePickerDialog.OnTimeSetListener() {
                             @Override
                             public void onTimeSet(TimePicker var1, int hourOfDay, int var3) {
@@ -443,7 +430,7 @@ public class MainActivity extends AppCompatActivity implements
 
         } else if (id == R.id.nav_logout) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            startActivity(new Intent(HomeMainActivity.this, LoginActivity.class));
             finish();
         } else if (id == R.id.nav_term) {
 
